@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delirio — Repostería de Autor & Cafetería de Especialidad | Cochabamba</title>
+  <meta name="description" content="Tartas artesanales, cheesecakes, vasitos gourmet, cookies y café de especialidad en Cochabamba, Bolivia. Realiza tu pedido en línea directo a WhatsApp.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra Superior de Anuncios -->
+  <div class="top-notice-bar">
+    <span>🛵 Envíos a domicilio en Cochabamba y retiro en tienda</span>
+    <span>•</span>
+    <span>Pedidos directos a WhatsApp: <strong class="brand-phone">+591 77769199</strong></span>
+  </div>
+
+  <!-- Cabecera Principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo">
+        <h1 class="brand-title brand-name">Delirio</h1>
+        <span class="brand-sub">Repostería & Café</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#catalogo">Carta & Menú</a></li>
+          <li><a href="#filosofia">Nuestra Esencia</a></li>
+          <li><a href="#horarios">Horarios & Retiro</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-cart-nav btn-open-cart" aria-label="Abrir Carrito">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span>Carrito</span>
+          <span class="cart-count-badge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>✨</span>
+          <span>Alta Repostería & Café de Origen en Cochabamba</span>
+        </div>
+        <h2 class="hero-title">
+          El dulce placer de lo <span>extraordinario.</span>
+        </h2>
+        <p class="hero-lead">
+          En Delirio fusionamos técnicas artesanales, ingredientes nobles de primera calidad y café de especialidad tostado a la perfección. Diseñados para despertar todos tus sentidos.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary">
+            <span>Explorar el Menú</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <button class="btn btn-secondary btn-open-cart">
+            <span>Ver mi Pedido</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img 
+          src="assets/images/products/tartaleta-frutos-rojos-flores.jpg" 
+          alt="Tartaleta de autor Delirio con frutos rojos y flores comestibles" 
+          class="hero-main-img"
+        />
+        <div class="hero-floating-card">
+          <div class="floating-icon">🌸</div>
+          <div>
+            <div class="floating-title">Creaciones de Autor con Flores Comestibles</div>
+            <div class="floating-subtitle">100% Fresco y elaborado en Cochabamba</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Catálogo de Productos -->
+  <section class="catalog-section" id="catalogo">
+    <div class="container">
+      <div class="catalog-header">
+        <div>
+          <h2 class="catalog-title">Nuestra Carta de Delicias</h2>
+          <p class="catalog-subtitle">Selecciona tus postres favoritos, personalízalos y envíanos tu pedido directo a WhatsApp</p>
+        </div>
+
+        <div class="catalog-search-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="Buscar cheesecake, brownie, café..."
+          />
+        </div>
+      </div>
+
+      <!-- Barra de Filtros por Categoría -->
+      <div class="categories-bar" id="categories-container">
+        <!-- Renderizado dinámico vía JavaScript -->
+      </div>
+
+      <div class="catalog-meta-row">
+        <span id="products-count">Cargando menú...</span>
+        <span>Precios en Bolivianos (Bs.)</span>
+      </div>
+
+      <!-- Grilla de Productos -->
+      <div class="products-grid" id="products-grid">
+        <!-- Renderizado dinámico vía JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofía & Valores -->
+  <section class="about-section" id="filosofia">
+    <div class="container about-grid">
+      <div>
+        <span class="product-badge" style="position: static; display: inline-block; margin-bottom: 12px;">Nuestra Esencia</span>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 18px;">
+          Pasión artesanal en cada detalle
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 14px; font-size: 0.95rem;">
+          Creemos que un postre no es solo un dulce, sino un momento de pausa y celebración. Por eso, en <strong>Delirio</strong> no usamos premezclas industriales ni conservantes artificiales.
+        </p>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Cada cheesecake, cookie y vasito es elaborado diariamente en pequeños lotes, garantizando texturas sedosas y sabores equilibrados que respetan el cacao genuino y la fruta natural.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feature-box">
+            <div class="feature-icon">🍫</div>
+            <div class="feature-title">Cacao & Chocolate Belga</div>
+            <div class="feature-desc">Utilizamos chocolate 70% de origen para un sabor intenso y auténtico.</div>
+          </div>
+          <div class="about-feature-box">
+            <div class="feature-icon">☕</div>
+            <div class="feature-title">Café de Caranavi 86+</div>
+            <div class="feature-desc">Granos de especialidad cultivados en altura y tostados artesanalmente.</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img 
+          src="assets/images/products/mocktails-frutas-especialidad.jpg" 
+          alt="Bebidas botánicas y cócteles artesanales de Delirio" 
+          style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover; box-shadow: var(--shadow-md);"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación & Horarios -->
+  <section class="location-section" id="horarios">
+    <div class="container">
+      <div class="location-card">
+        <div>
+          <h2 class="location-title">Pedidos & Envíos en Cochabamba</h2>
+          <p class="location-desc">
+            Atendemos pedidos programados para cumpleaños, eventos y meriendas especiales, con opción de entrega a domicilio express en toda la ciudad de Cochabamba o retiro sin fila.
+          </p>
+
+          <ul class="location-contact-list">
+            <li>
+              <span>📍</span>
+              <span class="brand-address">Cochabamba, Bolivia</span>
+            </li>
+            <li>
+              <span>💬</span>
+              <span>WhatsApp de atención rápida: <strong class="brand-phone">+591 77769199</strong></span>
+            </li>
+            <li>
+              <span>🛵</span>
+              <span>Delivery seguro y puntual con empaques térmicos especializados</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="location-box-side">
+          <h3 class="hours-title">Horarios de Atención</h3>
+          <div class="hours-item">
+            <span>Lunes a Viernes</span>
+            <span>09:00 – 20:30</span>
+          </div>
+          <div class="hours-item">
+            <span>Sábados</span>
+            <span>09:30 – 21:00</span>
+          </div>
+          <div class="hours-item">
+            <span>Domingos</span>
+            <span>10:00 – 18:00</span>
+          </div>
+          <div style="margin-top: 20px; text-align: center;">
+            <a href="https://wa.me/59177769199" target="_blank" class="btn btn-primary" style="width: 100%; background-color: var(--accent-gold);">
+              Escribir a WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="brand-name">Delirio</h3>
+          <p>Repostería artesanal y cafetería de especialidad en Cochabamba, Bolivia. Creando delicias memorables para tus mejores momentos.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#catalogo">Carta & Menú</a></li>
+            <li><a href="#filosofia">Sobre Nosotros</a></li>
+            <li><a href="#horarios">Horarios de Atención</a></li>
+            <li><a href="javascript:void(0)" class="btn-open-cart">Mi Carrito de Compras</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Directo</h4>
+          <ul>
+            <li><span>WhatsApp:</span> <a href="https://wa.me/59177769199" target="_blank" class="brand-phone">+591 77769199</a></li>
+            <li><span>Ciudad:</span> <span class="brand-city">Cochabamba, Bolivia</span></li>
+            <li><span>Instagram:</span> <a href="https://instagram.com" target="_blank">@delirio_reposteria</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Delirio Repostería & Café. Todos los derechos reservados. Cochabamba, Bolivia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL DE DETALLE DE PRODUCTO                                              -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      <button class="btn-close-modal" id="btn-close-modal" aria-label="Cerrar ventana">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modal-product-content">
+        <!-- Contenido inyectado por app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- CARRITO DE COMPRAS SLIDE-OVER DRAWER                                     -->
+  <!-- ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cart-drawer">
+    <div class="cart-drawer-backdrop" id="cart-drawer-backdrop"></div>
+    <div class="cart-drawer-panel">
+      
+      <div class="cart-drawer-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <h3 class="cart-header-title">Tu Pedido</h3>
+          <span class="cart-count-badge">0</span>
+        </div>
+        <button class="btn-close-drawer" id="btn-close-cart" aria-label="Cerrar carrito">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-drawer-body">
+        
+        <!-- Vista vacía -->
+        <div class="cart-empty-view" id="cart-empty-view">
+          <div class="empty-icon">🍰</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 6px;">Tu carrito está vacío</h4>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">
+            Aún no has agregado ninguna delicia a tu orden.
+          </p>
+          <button class="btn btn-primary" onclick="App.closeCartDrawer(); window.location.href='#catalogo';">
+            Ver Productos
+          </button>
+        </div>
+
+        <!-- Lista de productos añadidos -->
+        <div class="cart-items-list" id="cart-items-list">
+          <!-- Inyectado dinámicamente -->
+        </div>
+
+        <!-- Formulario de Checkout y Datos de Entrega -->
+        <div class="checkout-section" id="cart-footer-view" style="display: none;">
+          <h4 class="checkout-heading">Modalidad de Entrega</h4>
+          
+          <div class="delivery-type-toggle">
+            <label class="toggle-option">
+              <input type="radio" name="delivery-mode" id="radio-delivery" value="delivery" checked />
+              <span>🛵 Delivery</span>
+            </label>
+            <label class="toggle-option">
+              <input type="radio" name="delivery-mode" id="radio-pickup" value="pickup" />
+              <span>🏪 Retiro en Tienda</span>
+            </label>
+          </div>
+
+          <div class="checkout-form-grid">
+            <div class="form-group">
+              <label for="order-name">Tu Nombre y Apellido *</label>
+              <input type="text" id="order-name" class="form-control" placeholder="Ej: María José Fernández" required />
+            </div>
+
+            <div class="form-group">
+              <label for="order-phone">Número de Celular</label>
+              <input type="tel" id="order-phone" class="form-control" placeholder="Ej: 77769199" />
+            </div>
+
+            <div class="form-group" id="address-field-group">
+              <label for="order-address">Dirección de Entrega en Cochabamba *</label>
+              <input type="text" id="order-address" class="form-control" placeholder="Calle, número, edificio, piso o referencia" />
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="order-date">Fecha Deseada</label>
+                <input type="date" id="order-date" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="order-time">Hora Estimada</label>
+                <input type="time" id="order-time" class="form-control" value="16:00" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="order-notes">Instrucciones o Notas Especiales</label>
+              <input type="text" id="order-notes" class="form-control" placeholder="Ej: Enviar velitas, tocar timbre 4B..." />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pie del Carrito con Totales y Botón WhatsApp -->
+      <div class="cart-drawer-footer" id="cart-drawer-totals-box" style="display: block;">
+        <div class="cart-summary-totals">
+          <div class="summary-line">
+            <span>Subtotal:</span>
+            <span id="summary-subtotal">Bs. 0</span>
+          </div>
+          <div class="summary-line">
+            <span>Envío:</span>
+            <span id="summary-shipping">Bs. 15</span>
+          </div>
+          <div class="summary-line total-line">
+            <span>Total Estimado:</span>
+            <span id="summary-total">Bs. 0</span>
+          </div>
+        </div>
+
+        <button class="btn-whatsapp-order" id="btn-checkout-whatsapp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span>Confirmar Pedido por WhatsApp</span>
+        </button>
+
+        <button class="btn-clear-cart-text" id="btn-clear-cart">Vaciar carrito</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notification"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
